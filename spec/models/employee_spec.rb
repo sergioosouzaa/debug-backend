@@ -12,7 +12,7 @@ RSpec.describe Employee, type: :model do
 
   describe 'callbacks' do
     let!(:employee) { create(:employee, email: "JOHN.DOE@EXAMPLE.COM") }
-    
+
     it 'downcases email before saving' do
       expect(employee.email).to eq("john.doe@example.com")
     end
